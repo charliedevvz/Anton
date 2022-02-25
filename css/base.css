@@ -939,7 +939,7 @@ section {
 .contacto__background {
   width: 100%;
   margin-left: 5rem;
-  background-image: url("../../img/DSC00052.jpg");
+  background-image: url("../img/DSC00052.jpg");
   background-size: cover;
   -webkit-clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
           clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
@@ -1576,7 +1576,7 @@ section {
 }
 
 .fullBlog__image {
-  background-image: url(../../img/DSC00030.jpg);
+  background-image: url(../img/DSC00030.jpg);
   background-size: cover;
   background-position: center;
   width: 100%;
