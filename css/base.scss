@@ -1,0 +1,52 @@
+@import "mixins";
+@import "variables";
+@import "section";
+@import "animations";
+
+@import "components/button";
+@import "components/card";
+@import "components/calendar";
+@import "components/membership";
+@import "components/infoCard";
+@import "components/blog";
+@import "components/contacto";
+@import "components/navigation";
+@import "components/goUp";
+@import "sections/header";
+@import "sections/about";
+@import "sections/workouts";
+@import "sections/blogs";
+
+html {
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  scroll-behavior: smooth;
+}
+
+* {
+  font-size: 62.5%;
+  box-sizing: inherit;
+  color: #fff;
+}
+
+body {
+  background-color: rgb(27, 26, 26);
+  font-family: "Oswald", sans-serif;
+  box-sizing: border-box;
+  margin: 10px;
+  padding: 0;
+
+  @include respond-tablet() {
+    margin: 0;
+  }
+
+  @include respond-phone() {
+    margin: 0;
+  }
+}

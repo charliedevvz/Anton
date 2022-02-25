@@ -1,0 +1,131 @@
+.navigation {
+  position: fixed;
+  width: 7rem;
+  height: 7rem;
+  top: 3%;
+  right: 3%;
+  z-index: 1000;
+
+  @include respond-miniphone() {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  &__button {
+    position: fixed;
+    width: 7rem;
+    height: 7rem;
+    top: 3%;
+    right: 3%;
+    background-color: $color-primary;
+    transition: all 0.2s ease-out;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    z-index: 1500;
+    cursor: pointer;
+
+    @include respond-miniphone() {
+      width: 5rem;
+      height: 5rem;
+    }
+  }
+
+  &__background {
+    position: fixed;
+    width: 7rem;
+    height: 7rem;
+    top: 3%;
+    right: 3%;
+    border-radius: 50%;
+    background-image: radial-gradient($color-primary, $color-secondary);
+    transition: all 0.6s ease-out;
+    z-index: 1000;
+
+    @include respond-miniphone() {
+      width: 5rem;
+      height: 5rem;
+    }
+  }
+
+  &__line {
+    width: 60%;
+    height: 0.3rem;
+    background-color: #000;
+    margin-bottom: 1rem;
+  }
+
+  &__linewrapper {
+    position: absolute;
+    width: 100%;
+    top: 30%;
+    left: 20%;
+    @include respond-miniphone() {
+      top: 20%;
+      left: 21%;
+    }
+  }
+
+  &__list {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s linear;
+  }
+
+  &__nav {
+    list-style: none;
+
+    &Item:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+
+    &Lnk {
+      &:link,
+      &:visited {
+        display: block;
+        font-size: 3rem;
+        text-decoration: none;
+        color: #000;
+        padding: 0.8rem 1.6rem;
+        text-align: center;
+        background-image: linear-gradient(
+          120deg,
+          transparent 0%,
+          transparent 50%,
+          #fff 50%
+        );
+        background-size: 230%;
+        transition: all 0.5s;
+      }
+      &:hover {
+        background-position: 100%;
+      }
+    }
+  }
+}
+
+.toggleNavWidth {
+  width: 100%;
+}
+
+.toggleDisplay {
+  opacity: 1;
+  display: flex;
+  pointer-events: all;
+  z-index: 1600;
+}
+
+.toggleWhite {
+  background-color: #fff;
+  z-index: 1700;
+}
+
+.toggleBG {
+  transform: scale(80);
+}

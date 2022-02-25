@@ -1,0 +1,27 @@
+$color-primary: #f8b833;
+$color-secondary: #f5c96b;
+$color-bg-gray: rgb(32, 32, 32);
+
+.bg-clickGreen {
+  background-color: rgb(107, 231, 107) !important;
+}
+
+.color-gray {
+  color: rgb(77, 75, 75) !important;
+}
+
+.container {
+  margin: 0 10rem;
+
+  @include respond-phone() {
+    margin: 0 3rem;
+  }
+}
+
+.flex-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 6rem;
+}

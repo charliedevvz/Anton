@@ -1,0 +1,54 @@
+.about {
+  max-width: 80%;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  font-size: 8rem;
+  line-height: 3.5rem;
+  text-align: justify;
+
+  @include respond-phone() {
+    flex-direction: column;
+  }
+
+  &__imageContainer {
+    margin-right: 20rem;
+
+    @include respond-laptop() {
+      margin-right: 10rem;
+    }
+
+    @include respond-phone() {
+      margin-right: 0;
+    }
+  }
+
+  &__info {
+    font-size: 4rem;
+    font-weight: 300;
+  }
+
+  &__objetivos {
+    list-style: none;
+    padding: 0;
+  }
+
+  &__objetivoIcon {
+    color: $color-primary;
+    font-size: 2.5rem;
+    margin-right: 0.5rem;
+  }
+
+  &__objetivo {
+    font-size: 1.8rem;
+
+    &:not(last-child) {
+      margin-bottom: 5rem;
+    }
+  }
+
+  &__bold {
+    font-size: 1.8rem;
+    font-weight: 800;
+  }
+}

@@ -1,0 +1,19 @@
+@keyframes fade-in-right {
+  from {
+    transform: translateX(500px);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-left {
+  from {
+    transform: translateX(-500px);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

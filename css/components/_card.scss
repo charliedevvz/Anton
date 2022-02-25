@@ -1,0 +1,105 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 33vw;
+  margin: 0 5rem;
+
+  @include respond-laptop() {
+    margin: 0 2rem;
+  }
+
+  @include respond-tablet() {
+    margin: 3rem auto;
+    width: 100%;
+    align-items: center;
+  }
+
+  @include respond-phone() {
+    margin: 3rem auto;
+    width: 80%;
+    align-items: center;
+  }
+
+  &:hover .card__content {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    background-color: rgb(39, 38, 38);
+  }
+
+  &:hover .card__image {
+    transform: scale(1);
+    filter: grayscale(0);
+  }
+
+  &__heading {
+    font-size: 2.5rem;
+  }
+
+  &__image {
+    width: 100%;
+    filter: grayscale(100%);
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
+    transform: scale(0.8);
+    transition: all 0.8s;
+
+    @include respond-tablet() {
+      margin: 0 auto;
+      width: 80%;
+      filter: grayscale(0);
+      transform: scale(1);
+      transition: none;
+      clip-path: none;
+    }
+
+    @include respond-phone() {
+      margin: 0 auto;
+      width: 80%;
+      filter: grayscale(0);
+      transform: scale(1);
+      transition: none;
+      clip-path: none;
+    }
+  }
+
+  &__content {
+    padding: 3rem;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    transform: translateY(-70%) scale(0.8);
+    z-index: -2;
+    opacity: 0;
+    transition: all 0.8s;
+    font-weight: 300;
+
+    @include respond-laptop() {
+      transform: translateY(-50%) scale(0.8);
+    }
+
+    @include respond-tablet() {
+      width: 80%;
+      transform: translateY(0) scale(1);
+      opacity: 1;
+      background-color: rgb(39, 38, 38);
+      transition: none;
+    }
+
+    @include respond-phone() {
+      width: 80%;
+      transform: translateY(0) scale(1);
+      opacity: 1;
+      background-color: rgb(39, 38, 38);
+      transition: none;
+    }
+  }
+
+  &__content p {
+    font-size: 2rem;
+    text-align: justify;
+
+    @include respond-laptop() {
+      font-size: 1.5rem;
+    }
+  }
+}
